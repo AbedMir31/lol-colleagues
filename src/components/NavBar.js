@@ -12,7 +12,7 @@ export const NavBar = () => {
               <Image src={lol}></Image>
             </Col>
             <Col>
-              <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+              <Navbar.Brand href="#home">LoL Colleagues</Navbar.Brand>
             </Col>
           </Row>
         </Container>

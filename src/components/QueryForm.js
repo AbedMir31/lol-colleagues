@@ -1,17 +1,19 @@
-import { Button, Form, Col, Row, InputGroup } from "react-bootstrap";
-export const QueryForm = () => {
+import { Button, Form, Row, InputGroup } from "react-bootstrap";
+export const QueryForm = ({ handleSubmit }) => {
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <Row>
         <InputGroup>
           <Form.Control
             className="form-text"
+            name="ign1"
             type="text"
             placeholder="Summoner 1..."
             required
           ></Form.Control>
           <Form.Control
             className="form-text"
+            name="ign2"
             type="text"
             placeholder="Summoner 2..."
             required
