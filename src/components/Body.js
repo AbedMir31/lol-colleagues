@@ -11,8 +11,8 @@ export const Body = () => {
   const [user2, setUser2] = useState("");
 
   const handleSubmit = event => {
-    const ign1 = event.target.ign1.value;
-    const ign2 = event.target.ign2.value;
+    const ign1 = event.target.ign1.value.trim();
+    const ign2 = event.target.ign2.value.trim();
     if (ign1 === ign2) {
       alert("Usernames must not be the same!");
       return;
