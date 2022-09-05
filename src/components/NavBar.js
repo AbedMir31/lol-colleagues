@@ -1,6 +1,5 @@
-import { Container, Navbar, Col, Row, Image } from "react-bootstrap";
+import { Container, Navbar, Col, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import lol from "../assets/img/lol.svg";
 
 export const NavBar = () => {
   return (
@@ -8,11 +7,11 @@ export const NavBar = () => {
       <Navbar bg="dark" variant="dark">
         <Container fluid>
           <Row className="align-items-center">
+            <Col></Col>
             <Col>
-              <Image src={lol}></Image>
-            </Col>
-            <Col>
-              <Navbar.Brand href="#home">LoL Colleagues</Navbar.Brand>
+              <Navbar.Brand href="#home" style={{ fontSize: "28px" }}>
+                LoL Colleagues
+              </Navbar.Brand>
             </Col>
           </Row>
         </Container>

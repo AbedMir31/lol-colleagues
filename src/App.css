@@ -32,15 +32,16 @@
   }
 }
 
+
 .bg {
   height: 100vh;
   min-height: 100vh;
   overflow: auto;
-  background-image: url("./assets/img/bg.jpg");
+  background-image: url("./assets/img/pattern.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position:static
+  position:static;
 }
 .container.form-container {
   border: 3px groove rgba(168, 151, 151, 0.25);
@@ -49,7 +50,7 @@
   padding: 20px;
   min-width: 100px;
   max-width: 500px;
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
 .form-header {
