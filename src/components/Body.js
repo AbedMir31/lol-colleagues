@@ -19,7 +19,6 @@ export const Body = () => {
     }
 
     event.preventDefault();
-
     setLoaded(false);
     setMatchData(null);
     Query(ign1, ign2).then(res => {
@@ -35,7 +34,6 @@ export const Body = () => {
   const loadMatch = (ign1, ign2) => {
     if (loaded) {
       if (matchData) {
-        console.log(matchData);
         return <Matches ign1={ign1} ign2={ign2} matches={matchData}></Matches>;
       } else {
         return (
@@ -46,7 +44,7 @@ export const Body = () => {
           </Container>
         );
       }
-    } else return null;
+    }
   };
 
   return (

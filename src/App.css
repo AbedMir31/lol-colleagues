@@ -1,3 +1,37 @@
+@media only screen and (max-width: 600px) {
+  .col.champ-text {
+    font-size: 12px;
+  }
+  .container.match-container{
+    width: min-content;
+  }
+  .match-col-team {
+    width: max-content;
+  }
+  .champ-text {
+    width: max-content;
+    text-align: left;
+  }
+  .champ-kda {
+    font-size: 12px;
+    width: max-content;
+    display: none;
+  }
+  .match-col-head  {
+    margin-left: 120px;
+  }
+  .row.match-row {
+    width: fit-content;
+    text-align: center;
+  }
+  .match-map {
+    margin-right: 50px;
+  }
+  .match-type {
+    display: flex;
+  }
+}
+
 .bg {
   height: 100vh;
   min-height: 100vh;
@@ -44,22 +78,24 @@
   border-radius: 10px;
   padding: 20px;
   padding-bottom: 40px;
-  min-width: 100px;
-  max-width: 1000px;
   margin-top: 5%;
 }
 
 .row.match-row{
   padding: 15px 0px 15px 0px;
+  border: 3px groove rgba(168, 151, 151, 0.25);
 }
 .col.match-col-head{
   max-width: 30%;
+  min-width: 30%;
+  margin-right: 30px;
 }
 .match-map {
   font-size: 28px;
   text-align: center;
   margin-top: 15px;
   font-weight: 600;
+
 }
 .match-type {
   font-size: 20px;
@@ -84,8 +120,12 @@
 }
 
 .col.char-icon {
-  background-color: aqua;
   max-width: 32px;
   max-height: 32px;
   padding: 0px;
+}
+
+.match-col-team {
+  padding: 20px;
+  min-width: 170px;
 }

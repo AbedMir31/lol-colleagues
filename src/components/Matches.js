@@ -5,10 +5,12 @@ import RelativeTime from "@yaireo/relative-time";
 export const Matches = matches => {
   const matchData = matches.matches;
   const relTime = new RelativeTime();
-  console.log(matches.ign2);
 
   const renderMatches = matchData.map(match => {
     const q = queues.find(x => x.queueId === match.info.queueId);
+
+    console.log(match);
+    const teamWon = match.info.teams[0].win ? "team1" : "team2";
 
     const team1 = () => {
       return match.info.participants
@@ -33,8 +35,8 @@ export const Matches = matches => {
                   alt={champ.championName}
                 ></img>
               </Col>
-              <Col>{champ.summonerName}</Col>
-              <Col>{`${champ.kills}/${champ.deaths}/${champ.assists}`}</Col>
+              <Col className="champ-text">{champ.summonerName}</Col>
+              <Col className="champ-kda">{`${champ.kills}/${champ.deaths}/${champ.assists}`}</Col>
             </Row>
           );
         });
@@ -62,8 +64,8 @@ export const Matches = matches => {
                   alt={champ.championName}
                 ></img>
               </Col>
-              <Col>{champ.summonerName}</Col>
-              <Col>{`${champ.kills}/${champ.deaths}/${champ.assists}`}</Col>
+              <Col className="champ-text">{champ.summonerName}</Col>
+              <Col className="champ-kda">{`${champ.kills}/${champ.deaths}/${champ.assists}`}</Col>
             </Row>
           );
         });
@@ -80,8 +82,26 @@ export const Matches = matches => {
             {q ? relTime.from(match.info.gameEndTimestamp) : ""}
           </div>
         </Col>
-        <Col className="match-col-team">{team1()}</Col>
-        <Col className="match-col-team">{team2()}</Col>
+        <Col
+          className="match-col-team"
+          style={
+            teamWon === "team1"
+              ? { backgroundColor: "rgba(135, 206, 250, 0.75)" }
+              : { backgroundColor: "lightcoral" }
+          }
+        >
+          {team1()}
+        </Col>
+        <Col
+          className="match-col-team"
+          style={
+            teamWon === "team2"
+              ? { backgroundColor: "rgba(135, 206, 250, 0.75)" }
+              : { backgroundColor: "lightcoral" }
+          }
+        >
+          {team2()}
+        </Col>
       </Row>
     );
   });
