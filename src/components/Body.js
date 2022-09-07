@@ -44,6 +44,16 @@ export const Body = () => {
           </Container>
         );
       }
+    } else {
+      return (
+        <Container className="tooltip-container">
+          <Alert className="tooltip" variant="primary">
+            Enter your username and another person to view matches you have been
+            in together. This only can look up to your last 100 games played
+            (due to Riot API constraints).
+          </Alert>
+        </Container>
+      );
     }
   };
 

@@ -130,3 +130,21 @@
   padding: 20px;
   min-width: 170px;
 }
+
+.tooltip-container {
+  align-items: center;
+  min-width: 100px;
+  max-width: 800px;
+}
+
+.alert.tooltip {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  background-color: rgba(251, 251, 251, 1.0);
+  opacity: .98 !important;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+}
