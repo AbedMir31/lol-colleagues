@@ -9,7 +9,11 @@ export const NavBar = () => {
           <Row className="align-items-center">
             <Col></Col>
             <Col>
-              <Navbar.Brand href="#home" style={{ fontSize: "28px" }}>
+              <Navbar.Brand
+                href="#home"
+                style={{ fontSize: "28px" }}
+                onClick={() => window.location.reload()}
+              >
                 LoL Colleagues
               </Navbar.Brand>
             </Col>
