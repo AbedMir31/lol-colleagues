@@ -32,6 +32,9 @@
   }
 }
 
+.a:hover {
+  text-decoration: underline;
+}
 
 .bg {
   height: 100vh;
@@ -87,8 +90,6 @@
   border: 3px groove rgba(168, 151, 151, 0.25);
 }
 .col.match-col-head{
-  max-width: 30%;
-  min-width: 30%;
   margin-right: 30px;
 }
 .match-map {
@@ -126,10 +127,6 @@
   padding: 0px;
 }
 
-.match-col-team {
-  padding: 20px;
-  min-width: 170px;
-}
 
 .tooltip-container {
   align-items: center;
@@ -138,7 +135,7 @@
 }
 
 .alert.tooltip {
-  margin-top: 20px;
+  margin-top: 20px; 
   text-align: center;
   font-size: 18px;
   background-color: rgba(251, 251, 251, 1.0);
@@ -147,4 +144,24 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 600px;
+}
+
+.champ-text {
+  color: "black";
+  text-decoration: none;
+}
+.champ-text:hover {
+  text-decoration: underline;
+}
+
+.row.player-row {
+  padding: 3px 5px 3px 5px
+}
+
+.col.match-col-team {
+  border: 6px groove rgba(168, 151, 151, 0.25);
+}
+
+.champ-kda {
+  text-align: end;
 }

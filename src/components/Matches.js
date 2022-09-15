@@ -18,6 +18,7 @@ export const Matches = matches => {
         .map(champ => {
           return (
             <Row
+              className="player-row"
               key={champ.summonerName}
               style={
                 champ.summonerName.toLowerCase().replace(" ", "") ===
@@ -35,7 +36,19 @@ export const Matches = matches => {
                   alt={champ.championName}
                 ></img>
               </Col>
-              <Col className="champ-text">{champ.summonerName}</Col>
+              <Col className="champ-text">
+                <a
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                  href={`https://na.op.gg/summoners/na/${champ.summonerName}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {champ.summonerName}
+                </a>
+              </Col>
               <Col className="champ-kda">{`${champ.kills}/${champ.deaths}/${champ.assists}`}</Col>
             </Row>
           );
@@ -47,6 +60,7 @@ export const Matches = matches => {
         .map(champ => {
           return (
             <Row
+              className="player-row"
               key={champ.summonerName}
               style={
                 champ.summonerName.toLowerCase().replace(" ", "") ===
@@ -64,7 +78,20 @@ export const Matches = matches => {
                   alt={champ.championName}
                 ></img>
               </Col>
-              <Col className="champ-text">{champ.summonerName}</Col>
+              <Col className="champ-text">
+                <a
+                  style={{
+                    "--hover-decoration": "underline",
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                  href={`https://na.op.gg/summoners/na/${champ.summonerName}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {champ.summonerName}
+                </a>
+              </Col>
               <Col className="champ-kda">{`${champ.kills}/${champ.deaths}/${champ.assists}`}</Col>
             </Row>
           );
