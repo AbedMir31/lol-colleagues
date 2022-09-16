@@ -67,7 +67,9 @@ export const Matches = matches => {
                   matches.ign1.toLowerCase().replace(" ", "") ||
                 champ.summonerName.toLowerCase().replace(" ", "") ===
                   matches.ign2.toLowerCase().replace(" ", "")
-                  ? { fontWeight: "bold" }
+                  ? {
+                      fontWeight: "bold",
+                    }
                   : {}
               }
             >

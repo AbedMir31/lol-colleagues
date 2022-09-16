@@ -27,7 +27,6 @@ export async function Query(ign1, ign2) {
 
     return matchesData;
   } catch (err) {
-    //console.log(err);
-    return [];
+    return String("Error: Invalid username.");
   }
 }

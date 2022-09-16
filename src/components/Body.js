@@ -33,7 +33,15 @@ export const Body = () => {
 
   const loadMatch = (ign1, ign2) => {
     if (loaded) {
-      if (matchData) {
+      if (typeof matchData === "string") {
+        return (
+          <Container className="no-match">
+            <Alert className="no-match-alert" variant="danger">
+              Error: Invalid username.
+            </Alert>
+          </Container>
+        );
+      } else if (matchData instanceof Array) {
         return <Matches ign1={ign1} ign2={ign2} matches={matchData}></Matches>;
       } else {
         return (
