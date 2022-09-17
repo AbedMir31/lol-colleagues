@@ -165,3 +165,10 @@
 .champ-kda {
   text-align: end;
 }
+
+.match-link{
+  text-decoration: none;
+}
+.match-link:hover{
+  text-decoration: underline;
+}

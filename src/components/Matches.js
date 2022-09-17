@@ -110,6 +110,16 @@ export const Matches = matches => {
           <div className="match-type">
             {q ? relTime.from(match.info.gameEndTimestamp) : ""}
           </div>
+          <div className="match-type">
+            <a
+              className="match-link"
+              href={`https://tracker.gg/lol/match/na/${match.info.gameId}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Tracker.gg
+            </a>
+          </div>
         </Col>
         <Col
           className="match-col-team"
