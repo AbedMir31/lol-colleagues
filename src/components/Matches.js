@@ -8,8 +8,6 @@ export const Matches = matches => {
 
   const renderMatches = matchData.map(match => {
     const q = queues.find(x => x.queueId === match.info.queueId);
-
-    console.log(match);
     const teamWon = match.info.teams[0].win ? "team1" : "team2";
 
     const team1 = () => {
